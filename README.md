@@ -2,6 +2,8 @@
 
 Tiny always-on-top clock window for Windows that stays near the taskbar clock and shows another timezone.
 
+Timezone handling uses Python `zoneinfo` with `tzdata` for reliable IANA timezone data on Windows.
+
 ## Features
 
 - Shows city + date + time (example: `Shanghai Tue 04-07 09:30`)
@@ -28,6 +30,7 @@ TIMEZONE_NAME = "Asia/Shanghai"
 ```
 
 Use any valid IANA timezone (for example `Europe/London`, `America/New_York`, `Asia/Tokyo`).
+Users can also change timezone and city label at runtime from the right-click `Settings` menu.
 
 ## Run without terminal window
 
@@ -46,6 +49,7 @@ pip install pyinstaller
 Build output:
 
 - `dist\WorldClock.exe`
+- Build includes `tzdata`, so end users do not need to install timezone packages.
 
 ## Auto-start on Windows login
 

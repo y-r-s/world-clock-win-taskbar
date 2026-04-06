@@ -14,6 +14,7 @@ pyinstaller `
   --clean `
   --onefile `
   --windowed `
+  --collect-data tzdata `
   --name WorldClock `
   main.py
 

@@ -32,7 +32,7 @@ jobs:
       - name: Build exe
         shell: powershell
         run: |
-          pyinstaller --noconfirm --clean --onefile --windowed --name WorldClock main.py
+          pyinstaller --noconfirm --clean --onefile --windowed --collect-data tzdata --name WorldClock main.py
 
       - name: Package zip
         shell: powershell
